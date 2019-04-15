@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelColumnNumber", "ExcelC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubbleSort", "BubbleSort\BubbleSort.csproj", "{2D39E0DF-645B-495F-9801-743D0B6E1649}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDuplicates", "RemoveDuplicates\RemoveDuplicates.csproj", "{1A76B4FE-8708-4187-AA4F-6230541F5884}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualSidesOfAnArray", "EqualSidesOfAnArray\EqualSidesOfAnArray.csproj", "{9EC337C0-9277-4F1A-A5A2-82896CEBF5D6}"
 EndProject
 Global
@@ -41,6 +43,10 @@ Global
 		{2D39E0DF-645B-495F-9801-743D0B6E1649}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D39E0DF-645B-495F-9801-743D0B6E1649}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D39E0DF-645B-495F-9801-743D0B6E1649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A76B4FE-8708-4187-AA4F-6230541F5884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A76B4FE-8708-4187-AA4F-6230541F5884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A76B4FE-8708-4187-AA4F-6230541F5884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A76B4FE-8708-4187-AA4F-6230541F5884}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9EC337C0-9277-4F1A-A5A2-82896CEBF5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9EC337C0-9277-4F1A-A5A2-82896CEBF5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EC337C0-9277-4F1A-A5A2-82896CEBF5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
