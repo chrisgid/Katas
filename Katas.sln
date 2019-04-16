@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDuplicates", "RemoveD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EqualSidesOfAnArray", "EqualSidesOfAnArray\EqualSidesOfAnArray.csproj", "{9EC337C0-9277-4F1A-A5A2-82896CEBF5D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQTest", "IQTest\IQTest.csproj", "{CCD49955-B35E-45E3-990E-3E05183AA9CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9EC337C0-9277-4F1A-A5A2-82896CEBF5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EC337C0-9277-4F1A-A5A2-82896CEBF5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EC337C0-9277-4F1A-A5A2-82896CEBF5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCD49955-B35E-45E3-990E-3E05183AA9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD49955-B35E-45E3-990E-3E05183AA9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD49955-B35E-45E3-990E-3E05183AA9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD49955-B35E-45E3-990E-3E05183AA9CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
