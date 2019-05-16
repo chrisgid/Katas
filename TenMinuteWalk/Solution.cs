@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+
+// https://www.codewars.com/kata/take-a-ten-minute-walk/csharp
 
 namespace TenMinuteWalk
 {
@@ -10,30 +13,20 @@ namespace TenMinuteWalk
     {
         public static bool IsValidWalk(string[] walk)
         {
-            const int tenMinutes = 10;
+            if (walk.Length != 10) return false;
 
-            var position = new Position(0, 0);
-            var totalDistance = 0;
+            Point start = new Point(0, 0);
+            var currentPosition = start;
 
-
-            var validDistance = totalDistance == tenMinutes;
-            var backToStart = position == new Position(0, 0);
-
-
-
-            return validDistance && backToStart;
+            foreach (var direction in walk)
+            {
+                if (direction == "n")      start.X += 1;
+                else if (direction == "e") start.Y += 1;
+                else if (direction == "s") start.X -= 1;
+                else if (direction == "w") start.Y -= 1;
+            }
+            
+            return currentPosition == start;
         }
-    }
-
-    public struct Position
-    {
-        public Position(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
-
-        public int X { get; set; }
-        public int Y { get; set; }
     }
 }
