@@ -14,25 +14,27 @@ namespace AddTwoLinkedLists
         {
             ListNode rootOut = null;
 
-            AddTwoNumbersCarry(l1, l2, rootOut, 0);
+            AddTwoNumbersCarry(l1, l2, ref rootOut, 0);
 
             return rootOut;
         }
 
-        private static void AddTwoNumbersCarry(ListNode l1, ListNode l2, ListNode lout, int carry)
+        private static void AddTwoNumbersCarry(ListNode l1, ListNode l2, ref ListNode lout, int carry)
         {
-            int addVal = l1.val + l2.val;
-            int carryVal = addVal % 10;
-            int newVal = addVal - carryVal;
+            int addVal = (l1?.val ?? 0) + (l2?.val ?? 0) + carry;
 
-            if (lout == null)
+            int carryVal = addVal < 10 ? 0 : 1;
+
+            lout = new ListNode(addVal % 10);
+            
+            if (l1?.next == null && l2?.next == null && carryVal == 0)
             {
-                lout = new ListNode(newVal);
+                return;
             }
-
-            //if both l1 and l2 are null and carryVal==0 return
-
-            //else AddTwoNumbersCarry(.....
+            else
+            {
+                AddTwoNumbersCarry(l1?.next, l2?.next, ref lout.next, carryVal);
+            }
         }
     }
 }

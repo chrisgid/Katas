@@ -11,7 +11,7 @@ namespace AddTwoLinkedLists
     class Tests
     {
         [Test]
-        public void Test1()
+        public void LeetCodeExample()
         {
             var root1 = new ListNode(2)
             {
@@ -40,13 +40,103 @@ namespace AddTwoLinkedLists
 
             var actual = Solution.AddTwoNumbers(root1, root2);
 
-            Assert.That(AreSame(actual, expected));
+            Assert.That(HaveSameVals(actual, expected));
+        }
+
+        [Test]
+        public void AllZero()
+        {
+            var root1 = new ListNode(0);
+            var root2 = new ListNode(0);
+            var expected = new ListNode(0);
+
+            var actual = Solution.AddTwoNumbers(root1, root2);
+
+            Assert.That(HaveSameVals(actual, expected));
+        }
+
+        [Test]
+        public void OneNull()
+        {
+            ListNode root1 = null;
+            var root2 = new ListNode(1);
+            var expected = new ListNode(1);
+
+            var actual = Solution.AddTwoNumbers(root1, root2);
+
+            Assert.That(HaveSameVals(actual, expected));
+        }
+
+        [Test]
+        public void AllNines()
+        {
+            var root1 = new ListNode(9)
+            {
+                next = new ListNode(9)
+                {
+                    next = new ListNode(9)
+                }
+            };
+
+            var root2 = new ListNode(9)
+            {
+                next = new ListNode(9)
+                {
+                    next = new ListNode(9)
+                }
+            };
+
+
+            var expected = new ListNode(8)
+            {
+                next = new ListNode(9)
+                {
+                    next = new ListNode(9)
+                    {
+                        next = new ListNode(1)
+                    }
+                }
+            };
+
+            var actual = Solution.AddTwoNumbers(root1, root2);
+
+            Assert.That(HaveSameVals(actual, expected));
+        }
+
+        [Test]
+        public void DifferentLengths()
+        {
+            var root1 = new ListNode(9);
+
+            var root2 = new ListNode(9)
+            {
+                next = new ListNode(9)
+                {
+                    next = new ListNode(9)
+                }
+            };
+
+
+            var expected = new ListNode(8)
+            {
+                next = new ListNode(0)
+                {
+                    next = new ListNode(0)
+                    {
+                        next = new ListNode(1)
+                    }
+                }
+            };
+
+            var actual = Solution.AddTwoNumbers(root1, root2);
+
+            Assert.That(HaveSameVals(actual, expected));
         }
 
         /// <summary>
         /// Recursively compares ListNodes
         /// </summary>
-        private bool AreSame(ListNode l1, ListNode l2)
+        private bool HaveSameVals(ListNode l1, ListNode l2)
         {
             if (l1.val == l2.val)
             {
@@ -63,7 +153,7 @@ namespace AddTwoLinkedLists
                     return false;
                 }
 
-                return AreSame(l1.next, l2.next);
+                return HaveSameVals(l1.next, l2.next);
             }
             else
             {
