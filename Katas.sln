@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenMinuteWalk", "TenMinuteW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTwoLinkedLists", "AddTwoLinkedLists\AddTwoLinkedLists.csproj", "{9A027A40-28EC-44FE-BD74-0B15D60251BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveNthFromLinkedList", "RemoveNthFromLinkedList\RemoveNthFromLinkedList.csproj", "{F3318AD1-7BED-435B-B850-28C758A34604}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{9A027A40-28EC-44FE-BD74-0B15D60251BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A027A40-28EC-44FE-BD74-0B15D60251BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A027A40-28EC-44FE-BD74-0B15D60251BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3318AD1-7BED-435B-B850-28C758A34604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3318AD1-7BED-435B-B850-28C758A34604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3318AD1-7BED-435B-B850-28C758A34604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3318AD1-7BED-435B-B850-28C758A34604}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
