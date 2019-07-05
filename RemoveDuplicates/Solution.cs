@@ -12,6 +12,7 @@ namespace RemoveDuplicates
     {
         public int RemoveDuplicates(int[] nums)
         {
+            if (nums.Length == 0 || nums.Length == 1) return nums.Length;
             /* Modify the sorted list IN PLACE to remove any duplicates
              * Return the length of the array with the duplicates removed
              * Anything in the array after the returned length can be ignored
@@ -20,7 +21,24 @@ namespace RemoveDuplicates
              * and a length of 2 is returned.
             */
 
-            throw new NotImplementedException();
+
+            int currentNum = nums[0];
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                int nextNum = nums[i];
+
+                if (currentNum == nextNum)
+                {
+                    
+                }
+
+                currentNum = nextNum;
+            }
+
+            int[] test = new int[0];
+
+            return 2;
         }
     }
 }
