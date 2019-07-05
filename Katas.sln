@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveNthFromLinkedList", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Completed", "Completed", "{E973F588-9FB0-41B3-A781-1116B094A5C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanToInteger", "RomanToInteger\RomanToInteger.csproj", "{8FFAEF11-2067-4F3A-AED5-6E1B6DE7B524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{F3318AD1-7BED-435B-B850-28C758A34604}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3318AD1-7BED-435B-B850-28C758A34604}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3318AD1-7BED-435B-B850-28C758A34604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FFAEF11-2067-4F3A-AED5-6E1B6DE7B524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FFAEF11-2067-4F3A-AED5-6E1B6DE7B524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FFAEF11-2067-4F3A-AED5-6E1B6DE7B524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FFAEF11-2067-4F3A-AED5-6E1B6DE7B524}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +95,7 @@ Global
 		{606F6E2F-052D-407E-872E-58D9AA2BC4CB} = {E973F588-9FB0-41B3-A781-1116B094A5C2}
 		{9A027A40-28EC-44FE-BD74-0B15D60251BA} = {E973F588-9FB0-41B3-A781-1116B094A5C2}
 		{F3318AD1-7BED-435B-B850-28C758A34604} = {E973F588-9FB0-41B3-A781-1116B094A5C2}
+		{8FFAEF11-2067-4F3A-AED5-6E1B6DE7B524} = {E973F588-9FB0-41B3-A781-1116B094A5C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3F6B11C-D574-4BBC-8A9E-C0842F5CF4BD}
