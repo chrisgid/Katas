@@ -21,24 +21,27 @@ namespace RemoveDuplicates
              * and a length of 2 is returned.
             */
 
+            int frontIndex = 0;
+            int runnerIndex = 1;
+            int frontNum = nums[frontIndex];
 
-            int currentNum = nums[0];
-
-            for (int i = 1; i < nums.Length; i++)
+            while (runnerIndex < nums.Length)
             {
-                int nextNum = nums[i];
+                int nextNum = nums[runnerIndex];
 
-                if (currentNum == nextNum)
+                if (frontNum == nextNum)
                 {
-                    
+                    runnerIndex++;
                 }
-
-                currentNum = nextNum;
+                else
+                {
+                    frontIndex++;
+                    frontNum = nextNum;
+                    nums[frontIndex] = frontNum;
+                }
             }
 
-            int[] test = new int[0];
-
-            return 2;
+            return frontIndex + 1;
         }
     }
 }
