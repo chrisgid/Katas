@@ -10,10 +10,16 @@ namespace ContainerWithMostWater
 {
     public class Solution
     {
+        const int positionIndex = 0;
+        const int heightIndex = 1;
+
         public int MaxArea(int[] height)
         {
-            if (height.Length == 1) return 0;
             if (height.Length <= 2) return height.Min();
+
+            // int[] { position, height }
+            int[] tallest = new int[] { -1, -1 };
+            int[] secondTallest = new int[] { -1, -1 };
 
             
 
@@ -23,6 +29,16 @@ namespace ContainerWithMostWater
             }
 
             return height.Min();
+        }
+
+        private int ComputeArea(int[] one, int[] two)
+        {
+            int width = one[positionIndex] - two[positionIndex];
+            if (width < 0) width = -width;
+
+            int height = one[heightIndex] <= two[heightIndex] ? one[heightIndex] : two[heightIndex];
+
+            return width * height;
         }
     }
 }
