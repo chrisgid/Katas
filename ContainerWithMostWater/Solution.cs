@@ -10,33 +10,49 @@ namespace ContainerWithMostWater
 {
     public class Solution
     {
-        const int positionIndex = 0;
-        const int heightIndex = 1;
-
         public int MaxArea(int[] height)
         {
             if (height.Length <= 2) return height.Min();
 
-            // int[] { position, height }
-            int[] tallest = new int[] { -1, -1 };
-            int[] secondTallest = new int[] { -1, -1 };
+            int tallestPostion;
+            int secondTallestPosition;
 
-            
-
-            for (int i = 0; i < height.Length; i++)
+            if (height[0] > height[1])
             {
-
+                tallestPostion = 0;
+                secondTallestPosition = 1;
+            }
+            else
+            {
+                tallestPostion = 1;
+                secondTallestPosition = 0;
             }
 
-            return height.Min();
+            for (int i = 2; i < height.Length; i++)
+            {
+                if (height[i] > height[secondTallestPosition])
+                {
+                    if (height[i] > height[tallestPostion])
+                    {
+                        secondTallestPosition = tallestPostion;
+                        tallestPostion = i;
+                    }
+                    else
+                    {
+                        secondTallestPosition = i;
+                    }
+                }
+            }
+
+            return ComputeArea(height, tallestPostion, secondTallestPosition);
         }
 
-        private int ComputeArea(int[] one, int[] two)
+        public int ComputeArea(int[] heights, int position1, int position2)
         {
-            int width = one[positionIndex] - two[positionIndex];
+            int width = position1 - position2;
             if (width < 0) width = -width;
 
-            int height = one[heightIndex] <= two[heightIndex] ? one[heightIndex] : two[heightIndex];
+            int height = heights[position1] <= heights[position2] ? heights[position1] : heights[position2];
 
             return width * height;
         }
